@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
+import 'login_page.dart';
+
 class OnboardingScreen extends StatefulWidget {
   const OnboardingScreen({super.key});
 
@@ -119,26 +121,26 @@ Onboard(
                     padding: const EdgeInsets.only(left:167.5,right:167.5,top:48,),
                     child: Image.asset("images/img_3.png",),
                   ),
-                  SizedBox(height: 503.66,),
+                  const SizedBox(height: 503.66,),
                   Text(title,
-                    style: TextStyle(
+                    style: const TextStyle(
                       fontWeight: FontWeight.w600,
                       fontSize: 32,
                       color: Colors.white,
                     ),
                   ),
                   Text(description,
-                  style: TextStyle(
+                  style: const TextStyle(
                     fontSize: 16,
                     fontWeight: FontWeight.w400,
                     color: Colors.white,
                   ),
                   ),
-                  SizedBox(height: 32,),
+                  const SizedBox(height: 32,),
                   if (currentPageIndex < 2)SmoothPageIndicator(
                       controller: pageController ,  // PageController
                       count: count ,
-                      effect:  SlideEffect(
+                      effect:  const SlideEffect(
                         dotWidth: 10,
                         dotHeight: 10,
                       ),  // your preferred effect
@@ -157,27 +159,32 @@ Onboard(
                         alignment: Alignment.bottomLeft,
                         child: Row(
                           children: [
-                            Container(
-                              width: 163.5,
-                              height: 40,
-                              margin: EdgeInsets.only(left: 2,right: 2,top: 4,bottom: 4),
-                              decoration: BoxDecoration(
-                                color: Color(0xFFFEB92B),
-                                borderRadius: BorderRadius.circular(10)
-                              ),
-                              child: Align(
-                                alignment: Alignment.center,
-                                child: Text('Log in',
-                                  style: TextStyle(
-                                    fontSize: 14,
-                                    fontWeight: FontWeight.w600,
-                                    color: Color(0xFF232627),
+                            GestureDetector(
+                              onTap: (){
+                                Navigator.push(context, MaterialPageRoute(builder: (context)=>LoginPage()));
+                              },
+                              child: Container(
+                                width: 163.5,
+                                height: 40,
+                                margin: const EdgeInsets.only(left: 2,right: 2,top: 4,bottom: 4),
+                                decoration: BoxDecoration(
+                                  color: const Color(0xFFFEB92B),
+                                  borderRadius: BorderRadius.circular(10)
+                                ),
+                                child: const Align(
+                                  alignment: Alignment.center,
+                                  child: Text('Log in',
+                                    style: TextStyle(
+                                      fontSize: 14,
+                                      fontWeight: FontWeight.w600,
+                                      color: Color(0xFF232627),
+                                    ),
                                   ),
                                 ),
                               ),
                             ),
-                            SizedBox(width: 30,),
-                            Text('Create account',
+                            const SizedBox(width: 30,),
+                            const Text('Create account',
                             style: TextStyle(
                               fontWeight: FontWeight.w600,
                               fontSize: 14,
