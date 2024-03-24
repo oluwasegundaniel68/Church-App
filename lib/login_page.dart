@@ -1,3 +1,5 @@
+import 'package:church_app/create_account.dart';
+import 'package:church_app/forgot_password.dart';
 import 'package:flutter/material.dart';
 
 class LoginPage extends StatefulWidget {
@@ -53,11 +55,16 @@ class _LoginPageState extends State<LoginPage> {
                       ),
                     ),
                     const SizedBox(width: 30,),
-                    const Text('Create account',
-                      style: TextStyle(
-                          fontWeight: FontWeight.w600,
-                          fontSize: 14,
-                          color: Color(0xFF6C7275)
+                    GestureDetector(
+                        onTap: (){
+                          Navigator.push(context, MaterialPageRoute(builder: (context)=>CreateAccount()));
+                        },
+                      child: const Text('Create account',
+                        style: TextStyle(
+                            fontWeight: FontWeight.w600,
+                            fontSize: 14,
+                            color: Color(0xFF6C7275)
+                        ),
                       ),
                     )
                   ],
@@ -112,11 +119,16 @@ class _LoginPageState extends State<LoginPage> {
                                   ),
                                 ),
                                 Spacer(),
-                                Text('Forgot password?',
-                                  style: TextStyle(
-                                    fontSize: 14,
-                                    fontWeight: FontWeight.w400,
-                                    color: Color(0xFFFEB92B),
+                                GestureDetector(
+                                  onTap: (){
+                                    Navigator.push(context, MaterialPageRoute(builder: (context)=>ForgotPassword()));
+                                  },
+                                  child: Text('Forgot password?',
+                                    style: TextStyle(
+                                      fontSize: 14,
+                                      fontWeight: FontWeight.w400,
+                                      color: Color(0xFFFEB92B),
+                                    ),
                                   ),
                                 )
                               ],
