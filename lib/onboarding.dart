@@ -1,3 +1,4 @@
+import 'package:church_app/create_account.dart';
 import 'package:flutter/material.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
@@ -184,12 +185,17 @@ Onboard(
                               ),
                             ),
                             const SizedBox(width: 30,),
-                            const Text('Create account',
-                            style: TextStyle(
-                              fontWeight: FontWeight.w600,
-                              fontSize: 14,
-                              color: Color(0xFF6C7275)
-                            ),
+                            GestureDetector(
+                              onTap: (){
+                              Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>CreateAccount()));
+                                 },
+                              child: const Text('Create account',
+                              style: TextStyle(
+                                fontWeight: FontWeight.w600,
+                                fontSize: 14,
+                                color: Color(0xFF6C7275)
+                              ),
+                              ),
                             )
                           ],
                         ),
