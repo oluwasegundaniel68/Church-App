@@ -2,6 +2,9 @@ import 'package:church_app/create_account.dart';
 import 'package:church_app/forgot_password.dart';
 import 'package:flutter/material.dart';
 
+import 'chatt_page.dart';
+import 'chatt_pagee.dart';
+
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
 
@@ -165,20 +168,25 @@ class _LoginPageState extends State<LoginPage> {
         ),
       ),
            SizedBox(height: 24,),
-           Container(
-             width: double.infinity,
-             height: 52,
-             decoration: BoxDecoration(
-               color: Color(0xFFFEB92B),
-               borderRadius: BorderRadius.circular(6),
-             ),
-             child: Center(
-               child: Text('Log in',
-               style: TextStyle(
-                 fontSize: 16,
-                 fontWeight: FontWeight.w600,
-                 color: Color(0xFF1E1E2F)
+           GestureDetector(
+             onTap: (){
+      Navigator.push(context,MaterialPageRoute(builder: (context)=>ChattPage()));
+    },
+             child: Container(
+               width: double.infinity,
+               height: 52,
+               decoration: BoxDecoration(
+                 color: Color(0xFFFEB92B),
+                 borderRadius: BorderRadius.circular(6),
                ),
+               child: Center(
+                 child: Text('Log in',
+                 style: TextStyle(
+                   fontSize: 16,
+                   fontWeight: FontWeight.w600,
+                   color: Color(0xFF1E1E2F)
+                 ),
+                 ),
                ),
              ),
            ),
