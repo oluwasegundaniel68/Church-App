@@ -1,5 +1,8 @@
 import 'package:church_app/forgot_password.dart';
+<<<<<<< HEAD
 import 'package:church_app/login_page.dart';
+=======
+>>>>>>> church_app/main
 import 'package:church_app/verify_email.dart';
 import 'package:flutter/material.dart';
 
@@ -16,6 +19,7 @@ class _CreateAccountState extends State<CreateAccount> {
   Widget build(BuildContext context) {
     return Scaffold(
           backgroundColor: const Color(0xFFFFFFFF),
+<<<<<<< HEAD
           body: SingleChildScrollView(
             child: Padding(
               padding: const EdgeInsets.only(left: 20,right: 20),
@@ -51,10 +55,61 @@ class _CreateAccountState extends State<CreateAccount> {
                               fontWeight: FontWeight.w600,
                               color: Color(0xFF232627),
                             ),
+=======
+          body: Padding(
+            padding: const EdgeInsets.only(left: 20,right: 20),
+            child: Column(
+                children: [
+            Padding(
+            padding: const EdgeInsets.only(top: 48,left: 167.5,right: 167.5),
+            child: Image.asset('images/img_5.png'),
+          ),
+          const SizedBox(height: 24,),
+          Container(
+            width: double.infinity,
+            height: 48,
+            decoration: BoxDecoration(
+                color: const Color(0xFFF3F5F7),
+                borderRadius: BorderRadius.circular(12)
+            ),
+            child: Align(
+              alignment: Alignment.bottomLeft,
+              child: Row(
+                children: [
+                  const Align(
+                    alignment: Alignment.center,
+                    child: Padding(
+                      padding: EdgeInsets.only(top: 8,bottom: 8,left: 62.5,right: 62.5),
+                      child: Text('Log in',
+                        style: TextStyle(
+                          fontSize: 14,
+                          fontWeight: FontWeight.w600,
+                          color: Color(0xFF232627),
+                        ),
+                      ),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(left: 37.5),
+                    child: Container(
+                      width: 163.5,
+                      height: 40,
+                      decoration: BoxDecoration(
+                          color: Color(0xFFFEFEFE),
+                          borderRadius: BorderRadius.circular(10)
+                      ),
+                      child: Center(
+                        child: const Text('Create account',
+                          style: TextStyle(
+                              fontWeight: FontWeight.w600,
+                              fontSize: 14,
+                              color: Color(0xFF6C7275)
+>>>>>>> church_app/main
                           ),
                         ),
                       ),
                     ),
+<<<<<<< HEAD
                     Padding(
                       padding: const EdgeInsets.only(left: 37.5),
                       child: Container(
@@ -99,10 +154,178 @@ class _CreateAccountState extends State<CreateAccount> {
                       hintText: 'First name',
                       prefixIcon: Icon(Icons.person,
                         color: Color(0xff6c727580),
+=======
+                  )
+                ],
+              ),
+            ),
+          ),
+        SizedBox(height: 24,),
+        Form(
+            child:Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+              const Text(
+              'First Name',
+              style: TextStyle(
+                fontWeight: FontWeight.w400,
+                fontSize: 14,
+                color: Color(0xFF141718),
+              ),
+            ),
+            const SizedBox(height: 8,),
+            TextFormField(
+                keyboardType: TextInputType.name,
+                decoration: const InputDecoration(
+                    hintText: 'First name',
+                    prefixIcon: Icon(Icons.person,
+                      color: Color(0xff6c727580),
+                    ),
+                    border: OutlineInputBorder(
+                        borderRadius: BorderRadius.all(Radius.circular(12)),
+                        borderSide: BorderSide(color: Color(0xFFBCC3D2))
+                    )
+                ),
+            )]
+            )
+          ),
+                  SizedBox(height: 8,),
+                  Form(
+                      child:Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            const Text(
+                              'Last Name',
+                              style: TextStyle(
+                                fontWeight: FontWeight.w400,
+                                fontSize: 14,
+                                color: Color(0xFF141718),
+                              ),
+                            ),
+                            const SizedBox(height: 8,),
+                            TextFormField(
+                              keyboardType: TextInputType.name,
+                              decoration: const InputDecoration(
+                                  hintText: 'Last name',
+                                  prefixIcon: Icon(Icons.person,
+                                    color: Color(0xff6c727580),
+                                  ),
+                                  border: OutlineInputBorder(
+                                      borderRadius: BorderRadius.all(Radius.circular(12)),
+                                      borderSide: BorderSide(color: Color(0xFFBCC3D2))
+                                  )
+                              ),
+                            )]
+                      )
+                  ),
+                  SizedBox(height: 8,),
+                  Form(
+                      child:Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            const Text(
+                              'Email',
+                              style: TextStyle(
+                                fontWeight: FontWeight.w400,
+                                fontSize: 14,
+                                color: Color(0xFF141718),
+                              ),
+                            ),
+                            const SizedBox(height: 8,),
+                            TextFormField(
+                              keyboardType: TextInputType.emailAddress,
+                              decoration: const InputDecoration(
+                                  hintText: 'Last name',
+                                  prefixIcon: Icon(Icons.email_rounded,
+                                    color: Color(0xff6c727580),
+                                  ),
+                                  border: OutlineInputBorder(
+                                      borderRadius: BorderRadius.all(Radius.circular(12)),
+                                      borderSide: BorderSide(color: Color(0xFFBCC3D2))
+                                  )
+                              ),
+                            )]
+                      )
+                  ),
+                  SizedBox(height: 8,),
+                  Form(
+                      child:Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            const Text(
+                              'Phone Number',
+                              style: TextStyle(
+                                fontWeight: FontWeight.w400,
+                                fontSize: 14,
+                                color: Color(0xFF141718),
+                              ),
+                            ),
+                            const SizedBox(height: 8,),
+                            TextFormField(
+                              keyboardType: TextInputType.phone,
+                              decoration: const InputDecoration(
+                                  hintText: 'Username or email',
+                                  prefixIcon: Icon(Icons.email_rounded,
+                                    color: Color(0xff6c727580),
+                                  ),
+                                  border: OutlineInputBorder(
+                                      borderRadius: BorderRadius.all(Radius.circular(12)),
+                                      borderSide: BorderSide(color: Color(0xFFBCC3D2))
+                                  )
+                              ),
+                            )]
+                      )
+                  ),
+                  SizedBox(height: 8,),
+                  Row(
+                    children: [
+                      const Text(
+                        'Password',
+                        style: TextStyle(
+                          fontWeight: FontWeight.w400,
+                          fontSize: 14,
+                          color: Color(0xFF141718),
+                        ),
+                      ),
+                      Spacer(),
+                      GestureDetector(
+                        onTap: (){
+      Navigator.push(context, MaterialPageRoute(builder: (context)=>ForgotPassword()));
+    },
+                        child: Text('Forgot password?',
+                          style: TextStyle(
+                            fontSize: 14,
+                            fontWeight: FontWeight.w400,
+                            color: Color(0xFFFEB92B),
+                          ),
+                        ),
+                      )],
+                  ),
+                  const SizedBox(height: 8,),
+                  TextFormField(
+                    obscureText: _isObscure,
+                    keyboardType: TextInputType.name,
+                    decoration:  InputDecoration(
+                      hintText: 'Password',
+                      prefixIcon: Icon(Icons.lock,
+                        color: Color(0xFF6C727580),
+                      ),
+                      suffixIcon: GestureDetector(
+                        onTap: (){
+                          setState(() {
+                            _isObscure = !_isObscure;
+                          });
+                        },
+                        child: Icon(
+                          _isObscure ? Icons.visibility : Icons.visibility_off,
+                          color: Color(0xFF6C727580),
+                        ),
+>>>>>>> church_app/main
                       ),
                       border: OutlineInputBorder(
                           borderRadius: BorderRadius.all(Radius.circular(12)),
                           borderSide: BorderSide(color: Color(0xFFBCC3D2))
+<<<<<<< HEAD
                       )
                   ),
               )]
@@ -275,10 +498,44 @@ class _CreateAccountState extends State<CreateAccount> {
                                 fontWeight: FontWeight.w600,
                                 color: Color(0xFF1E1E2F)
                             ),
+=======
+                      ),
+                    ),
+                  ),
+                  SizedBox(height: 8,),
+                  Text('Password must be a minimum of 8 characters, '
+                      'including at least\n1 number, '
+                      '1 lowercase, and 1 uppercase letter.',
+                  style: TextStyle(
+                    fontWeight: FontWeight.w400,
+                    fontSize: 12,
+                    color: Color(0xFF6C7275),
+                  ),
+                  ),
+                  SizedBox(height: 24,),
+                  GestureDetector(
+                    onTap: (){
+                      Navigator.push(context, MaterialPageRoute(builder: (context)=>VerifyEmail()));
+                    },
+                    child: Container(
+                      width: double.infinity,
+                      height: 52,
+                      decoration: BoxDecoration(
+                        color: Color(0xFFFEB92B),
+                        borderRadius: BorderRadius.circular(6),
+                      ),
+                      child: Center(
+                        child: Text('Create account',
+                          style: TextStyle(
+                              fontSize: 16,
+                              fontWeight: FontWeight.w600,
+                              color: Color(0xFF1E1E2F)
+>>>>>>> church_app/main
                           ),
                         ),
                       ),
                     ),
+<<<<<<< HEAD
                     SizedBox(height: 8,),
                     Row(
                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -300,5 +557,28 @@ class _CreateAccountState extends State<CreateAccount> {
                     ),
                 ])),
           ));
+=======
+                  ),
+                  SizedBox(height: 8,),
+                  Row(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text('By creating an account, you agree to our',
+                        style: TextStyle(
+                          fontWeight: FontWeight.w400,
+                          fontSize: 12,
+                          color: Color(0xFF6C7275),
+                        ),
+                      ),
+                      Text(" Terms of Service ",
+                        style: TextStyle(
+                          fontSize: 12,
+                          fontWeight: FontWeight.w600,
+                        ),
+                      )
+                    ],
+                  ),
+    ])));
+>>>>>>> church_app/main
   }
 }
