@@ -1,6 +1,8 @@
 import 'package:church_app/messages_pagee.dart';
 import 'package:flutter/material.dart';
 
+import 'billing_page.dart';
+
 class MessagesPage extends StatefulWidget {
   const MessagesPage({super.key});
 
@@ -511,4 +513,13 @@ class _MessagesPageState extends State<MessagesPage> {
     ),
     );
   }
+  void onItemTapped(int index) {
+    setState(() {
+      _selectedIndex = index;
+    });
+    if (index==2){
+      Navigator.push(context,MaterialPageRoute(builder: (context)=>BillingPage()));
+    }
+  }
 }
+

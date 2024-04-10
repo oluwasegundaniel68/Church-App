@@ -1,8 +1,11 @@
+import 'package:church_app/billing_page.dart';
 import 'package:church_app/chat_history.dart';
 import 'package:church_app/chatt_pagee.dart';
 import 'package:church_app/messages_page.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+
+import 'account_page.dart';
 
 class ChattPage extends StatefulWidget {
   const ChattPage({Key? key}) : super(key: key);
@@ -368,6 +371,12 @@ class _ChattPageState extends State<ChattPage> {
     setState(() {
       _selectedIndex = index;
     });
+    if (index==3){
+      Navigator.push(context,MaterialPageRoute(builder: (context)=>AccountPage()));
+    }
+    if (index==2){
+      Navigator.push(context,MaterialPageRoute(builder: (context)=>BillingPage()));
+    }
     switch(index){
       case 1:Navigator.push(context,MaterialPageRoute(builder: (context)=>MessagesPage()));
     }

@@ -1,3 +1,4 @@
+import 'package:church_app/chatt_page.dart';
 import 'package:flutter/material.dart';
 
 class VerifyEmail extends StatefulWidget {
@@ -80,15 +81,22 @@ class _VerifyEmailState extends State<VerifyEmail> {
                     color: Color(0xFFBCC3D2),
                   )
                 ),
-                child: Center(
-                  child: Text('0000000',
-                    style: TextStyle(
-                        fontSize: 16,
-                        fontWeight: FontWeight.w600,
-                        color: Color(0xFF343839),
+                child: TextFormField(
+                  keyboardType: TextInputType.number,
+                  decoration: InputDecoration(
+                    hintText: '000000',
+                    hintStyle:
+                    TextStyle(
+                      fontWeight: FontWeight.w400,
+                      fontSize: 22,
+                      color: Color(0xFF343839),
                     ),
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.all(Radius.circular(12)),
+                      borderSide: BorderSide(color: Color(0xFFBCC3D2)),
+                    )
                   ),
-                ),
+                )
               ),
               SizedBox(height: 8,),
               Align(
@@ -98,23 +106,29 @@ class _VerifyEmailState extends State<VerifyEmail> {
                     fontSize: 14,
                     fontWeight: FontWeight.w400,
                     color: Color(0xFF141718),
+
                   ),
                 ),
               ),
               SizedBox(height: 24,),
-              Container(
-                width: double.infinity,
-                height: 52,
-                decoration: BoxDecoration(
-                  color: Color(0xFFFEB92B),
-                  borderRadius: BorderRadius.circular(6),
-                ),
-                child: Center(
-                  child: Text('Verify Code',
-                    style: TextStyle(
-                        fontSize: 16,
-                        fontWeight: FontWeight.w600,
-                        color: Color(0xFF1E1E2F)
+              GestureDetector(
+                onTap: (){
+      Navigator.push(context, MaterialPageRoute(builder: (context)=>ChattPage()));
+    },
+                child: Container(
+                  width: double.infinity,
+                  height: 52,
+                  decoration: BoxDecoration(
+                    color: Color(0xFFFEB92B),
+                    borderRadius: BorderRadius.circular(6),
+                  ),
+                  child: Center(
+                    child: Text('Verify Code',
+                      style: TextStyle(
+                          fontSize: 16,
+                          fontWeight: FontWeight.w600,
+                          color: Color(0xFF1E1E2F)
+                      ),
                     ),
                   ),
                 ),

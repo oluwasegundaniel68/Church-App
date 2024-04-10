@@ -79,13 +79,13 @@ class _LoginPageState extends State<LoginPage> {
                 child:Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    const Text(
-                      'Email',
-                      style: TextStyle(
-                        fontWeight: FontWeight.w400,
-                        fontSize: 14,
-                        color: Color(0xFF141718),
-                      ),
+                      const Text(
+                        'Email',
+                        style: TextStyle(
+                          fontWeight: FontWeight.w400,
+                          fontSize: 14,
+                          color: Color(0xFF141718),
+                        ),
                     ),
                     const SizedBox(height: 8,),
                     TextFormField(
